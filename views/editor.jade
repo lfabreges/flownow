@@ -1,0 +1,15 @@
+extends layout
+
+block stylesheets
+  link(rel="stylesheet", href="/stylesheets/editor.css")
+
+block content
+  div#header
+    span#title= title
+    span#timer
+  div#content
+    input#duration(type="hidden", value="#{duration}")
+    textarea#editor
+
+block javascripts
+  script(src="/javascripts/editor.js")
