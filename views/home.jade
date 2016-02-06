@@ -1,24 +1,28 @@
 extends layout
 
 block stylesheets
+  link(rel="stylesheet", href="/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css")
   link(rel="stylesheet", href="/stylesheets/home.css")
 
 block content
-  form#content(action="/editor", method="get")
-    div
-      input#session-title(type="text", name="title" maxlength="50" autofocus="true"
-        placeholder="#{__('home.sessionTitle.placeholder')}"
-      )
-      select#session-duration(name="duration")
-        option(value="300") 5 minutes
-        option(value="600") 10 minutes
-        option(value="900") 15 minutes
-        option(value="1800") 30 minutes
-        option(value="3600") 1 heure
-        option(value="7200") 2 heures
-    div
-      input#session-start(type="submit", value="#{__('home.sessionStart')}")
-
+  div.container-fluid
+    form#session-form(action="/editor/", method="get")
+      h1= __('app.title')
+      div.form-group
+        label(for="session-name", class="sr-only")= __('home.sessionName.label')
+        input#session-name.form-control.input-lg(
+          type="text", name="name", maxlength="50", autofocus="true",
+          placeholder="#{__('home.sessionName.label')}")
+      div.form-group
+        div.input-group.bootstrap-timepicker.timepicker.input-group-lg
+          label(for="session-duration", class="sr-only")= __('home.sessionDuration.label')
+          input#session-duration(type="hidden", name="duration")
+          input#session-duration-timepicker.form-control(type="text")
+          span.input-group-addon
+            i.glyphicon.glyphicon-time
+      div.form-group
+        button.btn.btn-lg.btn-primary.btn-block(type="submit")= __('home.sessionStart')
 
 block javascripts
+  script(src="/vendors/bootstrap-timepicker/js/bootstrap-timepicker.min.js")
   script(src="/javascripts/home.js")

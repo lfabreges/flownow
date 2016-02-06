@@ -1,6 +1,7 @@
 {
-	"app.title": "Flownow",
-	"editor.defaultTitle": "Flownow",
-	"home.sessionTitle.placeholder": "Titre de la session",
-	"home.sessionStart": "Démarrer"
+	"app.title": "Flow Now",
+	"editor.sessionDefaultName": "Flow Now",
+	"home.sessionDuration.label": "Durée de la session",
+	"home.sessionName.label": "Nom de la session",
+	"home.sessionStart": "Démarrer la session"
 }
