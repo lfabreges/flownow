@@ -18,5 +18,11 @@
 }
 
 #timer {
+  background-color: #F8F8F8;
+  margin-right: 0;
+  padding-left: 15px;
   padding-right: 15px;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
