@@ -1,6 +1,6 @@
 {
-	"app.title": "Flow Now",
-	"editor.sessionDefaultName": "Flow Now",
+	"app.title": "Go Flow",
+	"editor.sessionDefaultName": "Go Flow",
 	"home.sessionDuration.label": "Durée de la session",
 	"home.sessionName.label": "Nom de la session",
 	"home.sessionStart": "Démarrer la session"
