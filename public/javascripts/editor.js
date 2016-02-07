@@ -74,12 +74,12 @@ $(document).ready(function () {
     } else {
       timer.start();
       editorElement.fadeOut(CONTENT_LIFE_TIME_IN_MILLISECONDS, function () {
-        editorElement.val('').trigger('input');
+        editorElement.val('').trigger('input').focus();
       });
     }
   });
 
   timer.reset();
   timerElement.fadeIn(1000);
-  editorElement.trigger('input').focus();
+  editorElement.trigger('input');
 });

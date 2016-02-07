@@ -10,7 +10,7 @@ block content
         a.navbar-brand(href="/")= name
   p#timer.navbar-text
   input#duration(type="hidden", value="#{duration}")
-  textarea#editor
+  textarea#editor(autofocus="true")
 
 block javascripts
   script(src="/javascripts/editor.js")
