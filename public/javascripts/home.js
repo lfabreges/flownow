@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  var sessionDefaultDuration = 300;
+  var sessionDefaultDuration = 900;
   var sessionDurationElement = $('#session-duration');
   var sessionDurationTimepickerElement = $('#session-duration-timepicker');
 
